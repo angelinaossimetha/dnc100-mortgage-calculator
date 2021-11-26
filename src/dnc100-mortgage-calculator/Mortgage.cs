@@ -25,7 +25,7 @@ namespace dnc100_mortgage_calculator
             int numberOfPayments = this.NumberOfPayments(this.term, this.period);
             double compoundedInterestRate = this.CompoundedInterestRate(monthlyInterestRate, numberOfPayments);
             double interestQuotient = this.InterestQuotient(monthlyInterestRate, compoundedInterestRate, numberOfPayments);
-            double monthlyPayment = this.principal * interestQuotient
+            double monthlyPayment = this.principle * interestQuotient;
             return System.Math.Round(monthlyPayment, 2);
         }
 

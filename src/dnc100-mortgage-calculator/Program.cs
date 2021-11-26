@@ -20,13 +20,13 @@ namespace dnc100_mortgage_calculator
             interestRate = Convert.ToDouble(Console.ReadLine());
 
             Console.WriteLine("Enter term:");
-            term = Int64.Parse(Console.ReadLine());
+            term = Int32.Parse(Console.ReadLine());
 
             Console.WriteLine("Enter period:");
-            period = Int64.Parse(Console.ReadLine());
+            period = Int32.Parse(Console.ReadLine());
 
             // Create a new Mortgage with the given attributes;
-            mortgage = new Mortgage(principle, interest, term, period);
+            mortgage = new Mortgage(principal, interestRate, term, period);
             // Use the Mortgage functions to calculate the monthly payment
             monthlyPayment = mortgage.Calculate();
             // Use WriteLine to output the monthly payment
